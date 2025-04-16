@@ -18,6 +18,11 @@ namespace MVC.Controllers
             return View();
         }
 
+        public IActionResult Airlines()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

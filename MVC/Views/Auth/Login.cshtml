@@ -1,0 +1,39 @@
+﻿@model MVC.Models.LoginUserViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "_Layout";
+}
+
+<h2>Login</h2>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Sign In</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Login" asp-controller="Auth" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="form-label fw-bold"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="form-label fw-bold"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Enter your password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                </div>
+            </form>
+
+            <div class="text-center">
+                <p>Don't have an account? <a asp-action="Register" asp-controller="Auth">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
