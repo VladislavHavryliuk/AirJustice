@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace MVC.Models
+namespace DBAccess.Models
 {
     public class Document
     {

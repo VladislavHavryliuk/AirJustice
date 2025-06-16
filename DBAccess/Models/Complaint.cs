@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata;
 
-namespace MVC.Models
+namespace DBAccess.Models
 {
     public enum ComplaintStatus
     {
