@@ -1,5 +1,8 @@
 using DBAccess;
+using FluentValidation.AspNetCore;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using MVC.Validators;
 
 namespace MVC
 {
@@ -15,6 +18,9 @@ namespace MVC
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(connectionString));
+
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining<RegisterValidator>();
 
             builder.Services.AddControllersWithViews();
 
