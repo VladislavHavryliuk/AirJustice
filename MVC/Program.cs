@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using MVC.Validators;
+using MVC.Extensions;
 
 namespace MVC
 {
@@ -23,6 +24,8 @@ namespace MVC
             builder.Services.AddValidatorsFromAssemblyContaining<RegisterValidator>();
 
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddProjectServices();
 
             var app = builder.Build();
 
