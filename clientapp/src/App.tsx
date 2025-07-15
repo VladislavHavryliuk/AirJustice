@@ -85,6 +85,18 @@ function HomePage() {
   );
 }
 
+function SuccessPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+      <h2 className="text-3xl font-bold text-green-600 mb-4">Жалоба успешно отправлена!</h2>
+      <p className="text-gray-600 mb-8">Наша команда свяжется с вами в ближайшее время.</p>
+      <Link to="/" className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700">
+        Вернуться на главную
+      </Link>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -94,6 +106,7 @@ function App() {
         <Route path="/submit-complaint" element={<ComplaintForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/knowledge-base" element={<KnowledgeBase />} />
+        <Route path="/success" element={<SuccessPage />} />
       </Routes>
     </div>
   );
